@@ -3,9 +3,8 @@ import MyStory from './MyStory';
 import MyWork from './MyWork';
 
 export default function Content(props) {
-    return (
-    
-    <div className="content"  style={{ marginTop: 100 }} ref={props.storyRef}>
+  return (
+    <div className="content" ref={props.storyRef}>
       <div style={{ marginTop: 100 }}>
         <div className="divRow">
           <MyStory />
@@ -14,19 +13,14 @@ export default function Content(props) {
           </div>
         </div>
       </div>
-  
-  
-  
       <div ref={props.workRef} style={{
         paddingTop: 100
       }}>
-  
-        <MyWork />
-  
+        <div className="divRow" style={{ marginBottom: 150 }}>
+          <MyWork />
+        </div>
+
       </div>
-  
-  
-  
-    </div>);
-  }
-  
+    </div>
+  );
+}

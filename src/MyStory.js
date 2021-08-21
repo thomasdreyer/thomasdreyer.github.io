@@ -1,17 +1,16 @@
-import { FaWhatsapp,FaSkype,FaGithub, } from "react-icons/fa";
+import { FaWhatsapp, FaSkype } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IconContext } from "react-icons";
 
 export default function MyStory() {
-    return (
+  return (
     <div className="details">
       <p>
         Hello,
-        I'm Thomas , a self taught full stack engineer and mobile applications
-        developer based in Johannesburg South Africa.
+        I'm Thomas , a self taught software engineer based in Johannesburg South Africa.
       </p>
       <p>
-        I've been building web and mobile based software applications for 12 years
+        I've been building software applications for web and mobile platforms for 12 years
         and have worked with both native applications as well as cross platform hybrid
         framweorks like IoNIC, rEACT NATIVE , XAMARIN and Flutter.
       </p>
@@ -25,24 +24,48 @@ export default function MyStory() {
         and have worked with both native applications as well as cross platform hybrid
         framweorks like IoNIC, rEACT NATIVE , XAMARIN and Flutter.
       </p>
-  
-  
-        <p>
+      <section>
+        My Goals:<br />
+        <ul>
+          <li>
+            RESPONSIVE DESIGN
+          </li>
+          <li>
+            PERFORMANCE
+          </li>
+          <li>
+            SCALABILTY
+          </li>
+          <li>
+            RELIABILITY
+          </li>
+          <li>
+            ADAPDATBILITY
+          </li>
+          <li>
+            COST EFFECTIVNESS
+          </li>
+        </ul>
+
+
+      </section>
+
+      <p>
         For work opportunities and/or consultations, please feel free to reach out to me via:
-       </p>
+      </p>
 
-        <div className="divRow">
-                <IconContext.Provider value={{ color: "lightblue", size:35, className: "icons"}}>
-  
-                                <FaWhatsapp  onClick={()=> window.open('https://wa.me/0027784879775')} />
+      <div className="divRow">
+        <IconContext.Provider value={{ color: "lightblue", size: 35, className: "icons" }}>
 
-                                <FaSkype onClick={()=> window.open('skype:tdreyer62?chat')} />
-                                
-                                <MdEmail onClick={()=> window.open('mailto:thomas@fsdev.co.za')} />
-                </IconContext.Provider>
-                      
-                </div>
-  
-  
+          <FaWhatsapp onClick={() => window.open('https://wa.me/0027784879775')} />
+
+          <FaSkype onClick={() => window.open('skype:tdreyer62?chat')} />
+
+          <MdEmail onClick={() => window.open('mailto:thomas@fsdev.co.za')} />
+        </IconContext.Provider>
+
+      </div>
+
+
     </div>);
-  } 
+}
