@@ -184,6 +184,95 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .AppLight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    color: black;
+    height: auto;
+    width: 100vw;
+  }
+
+  .AppDark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: azure;
+    height: auto;
+    width: 100vw;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: dimgrey;
+    opacity: 0.85;
+    max-width: 100vw;
+    padding: 10px;
+  }
+
+  .headerOpen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: dimgrey;
+    opacity: 0.85;
+  }
+  .content {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: darkblue;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    max-width: 100vw;
+    height: 50px;
+    padding: 7px;
+    opacity: 0.9;
+  }
+
+  .footer span {
+    color: rgb(18, 149, 224);
+    margin-right: 10px;
+    padding: 10px;
+  }
+  .footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .icons {
+    cursor: pointer;
+    margin: 10px;
+  }
+
   .divRow {
     display: flex;
     flex-direction: row;
@@ -191,114 +280,142 @@
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
-    width: 100%;
-    margin: 15px;
+    width: 80vw;
   }
 
   .divColumn {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .details {
     background-color: #282c34;
     padding: 10px;
-    margin: 10px;
     color: azure;
-    width: 100%;
+    width: 100vw;
     height: 100%;
   }
+
   .image {
-    width: 1;
-    height: 1;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .divRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    width: 100%;
-  }
-
-  .divColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .details {
-    background-color: #282c34;
-    padding: 10px;
-    margin: 10px;
-    color: azure;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .divRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    height: auto;
-    width: 100%;
-  }
-
-  .divColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .details {
-    background-color: #282c34;
-    padding: 10px;
-    margin: 10px;
-    color: azure;
-    width: 100%;
-    height: 100%;
+    display: none;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .AppLight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    color: black;
+    height: auto;
+    width: 100vw;
+  }
+
+  .AppDark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: azure;
+    height: auto;
+    width: 100vw;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: dimgrey;
+    opacity: 0.85;
+    max-width: 100vw;
+    padding: 10px;
+  }
+
+  .content {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: darkblue;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    max-width: 100vw;
+    height: 50px;
+    padding: 7px;
+    opacity: 0.9;
+  }
+
+  .footer span {
+    color: rgb(18, 149, 224);
+    margin-right: 10px;
+    padding: 10px;
+  }
+  .footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .icons {
+    cursor: pointer;
+    margin: 10px;
+  }
+
   .divRow {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     height: auto;
-    width: 80%;
+    width: 80vw;
   }
 
   .divColumn {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .details {
     background-color: #282c34;
     padding: 10px;
-    margin: 10px;
     color: azure;
-    width: 100%;
+    width: 100vw;
     height: 100%;
+  }
+
+  .image {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 45px;
   }
 }
 
