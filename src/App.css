@@ -91,7 +91,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    background-color: dimgrey;
+    background-color: darkblue;
     opacity: 0.85;
     max-width: 100vw;
     padding: 10px;
@@ -158,6 +158,7 @@
     flex-wrap: wrap;
     height: auto;
     width: 80vw;
+    margin: 15px;
   }
 
   .divColumn {
@@ -337,7 +338,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    background-color: dimgrey;
+    background-color: rgb(18, 149, 224);
     opacity: 0.85;
     max-width: 100vw;
     padding: 10px;
@@ -357,7 +358,7 @@
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
-    background-color: darkblue;
+    background-color: rgb(3, 77, 119);
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -481,8 +482,8 @@ input:checked + .slider:before {
 }
 
 .navButton {
-  color: dimgrey;
-  background-color: blue;
+  color: whitesmoke;
+  background-color: rgb(3, 77, 119);
   border: 1px solid transparent;
   cursor: pointer;
   margin: 10px;
@@ -490,3 +491,15 @@ input:checked + .slider:before {
   font-size: large;
   font-weight: 800;
 }
+
+.navButton:hover {
+  color: rgb(3, 77, 119);
+  background-color: whitesmoke;
+  border: 1px solid rgb(3, 77, 119);
+  cursor: pointer;
+  margin: 10px;
+  padding: 7px;
+  font-size: large;
+  font-weight: 800;
+}
+

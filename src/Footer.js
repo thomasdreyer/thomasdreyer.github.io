@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitterSquare, FaJsfiddle } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaJsfiddle } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { IconContext } from "react-icons";
 
 export default function Footer() {
@@ -9,13 +10,12 @@ export default function Footer() {
         size: 35,
         className: "icons"
       }}>
-        <FaJsfiddle onClick={() => window.open('https://jsfiddle.net/user/fsdevCOZA/fiddles/')} />
-        <FaGithub onClick={() => window.open('https://github.com/thomasdreyer')} />
+       
         <FaLinkedin onClick={() => window.open('https://www.linkedin.com/in/thomas-dreyer')} />
-        <FaTwitterSquare onClick={() => window.open('https://twitter.com/fsdevCOZA')} />
+        <FaXTwitter onClick={() => window.open('https://twitter.com/fsdevCOZA')} />
       </IconContext.Provider>
     </section>
 
-    <span>Thomas Dreyer &copy; 2021</span>
+    <span>Thomas Dreyer &copy; {new Date().getFullYear()}</span>
   </div>);
 }
