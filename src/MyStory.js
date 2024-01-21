@@ -49,7 +49,7 @@ Technological Stack: Proficient in JavaScript, TypeScript, Kotlin, Swift, React 
 
 
       <div className="divRow">
-        <IconContext.Provider value={{ color: "lightblue", size: 35, className: "icons" }}>
+        <IconContext.Provider value={{ color: "lightblue", size: 55, className: "icons" }}>
 
           <FaWhatsapp onClick={() => window.open('https://wa.me/0027606782623')} />
 

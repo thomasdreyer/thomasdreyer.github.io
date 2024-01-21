@@ -1,11 +1,12 @@
 import { FaGithub, FaJsfiddle  } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { portfolio_data } from './portfolio_data';
-
+import GitHubRepos from './GitHubRepos';
 
 export default function MyWork() {
-
-
+  const githubUsername = 'thomasdreyer';
+  const githubToken = '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';
+  const githubOrganization = 'fsdev-studio';
     const getRepo = () => {
         const username = 'thomasdreyer';
     const repoName = 'EatsEase';
@@ -51,14 +52,22 @@ export default function MyWork() {
 
     return (
         <div className="details">
-            <p> I write software with Javascript,Typescript,Kotlin,Swift, C# and Rust </p>
+            <p> I develop software using JavaScript to create dynamic and interactive web applications.
+               My expertise includes leveraging the power of JavaScript to enhance user experiences 
+               and ensure seamless functionality. Through coding and debugging in JavaScript,
+                I bring innovative solutions to life in the digital realm.  </p>
            
-            <IconContext.Provider value={{ color: "lightblue", size: 35, className: "icons" }}>
+                <div className="divRow">
+                <IconContext.Provider value={{ color: "lightblue", size: 65, className: "icons" }}>
                 <FaGithub onClick={() => window.open('https://github.com/thomasdreyer')} />
-                <FaJsfiddle onClick={() => window.open('https://jsfiddle.net/user/fsdevCOZA/fiddles/')} />
+              
      
             </IconContext.Provider>
-            {portfolio}
+</div>
+            {/* <GitHubRepos username={githubUsername} token={githubToken} organization={githubOrganization} /> */}
+            {
+            //portfolio
+            }
 
         </div>
     );
