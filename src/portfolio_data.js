@@ -1,10 +1,10 @@
 import placeholder from "./images/placeholder.png";
-
+import leasewise from "./images/leasewise.png";
 
 export const portfolio_data = [
     {
-        name: "3At2.com ",
-        images: [placeholder],
+        name: "LeaseWise ",
+        images: [leasewise],
         link: <a href="https://3at2.com">3At2.com</a>,
         summary: `3At2.com is an ecommenrce web application developed on Typscript,
          React, Redux, Node, Express and MySql. 

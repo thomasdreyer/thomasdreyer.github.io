@@ -1,112 +1,79 @@
-import { FaGithub, FaJsfiddle  } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { portfolio_data } from './portfolio_data';
-import GitHubRepos from './GitHubRepos';
+import { portfolio_data } from "./portfolio_data";
 
 export default function MyWork() {
-  const githubUsername = 'thomasdreyer';
-  const githubToken = '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';
-  const githubOrganization = 'fsdev-studio';
-    const getRepo = () => {
-        const username = 'thomasdreyer';
-    const repoName = 'EatsEase';
-    
-    // Fetch repository information from GitHub API
-    fetch(`https://api.github.com/repos/${username}/${repoName}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Failed to fetch repository information: ${response.status} ${response.statusText}`);
-        }
-        return response.json();
-      })
-      .then(repoInfo => {
-        // Handle the repository information
-        console.log('Repository Information:', repoInfo);
-      })
-      .catch(error => {
-        console.error('Error fetching repository information:', error);
-      });
-        
+  const [repoInfo, setRepoInfo] = useState(null);
+
+  useEffect(() => {
+    fetchRepoData("thomasdreyer", "EatsEase", setRepoInfo);
+  }, []);
+
+  // Function to Fetch GitHub Repository Information
+  const fetchRepoData = async (username, repoName, setRepoInfo) => {
+    try {
+      const response = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch repository: ${response.status} ${response.statusText}`);
+      }
+
+      const repoData = await response.json();
+      setRepoInfo(repoData);
+    } catch (error) {
+      console.error("Error fetching repository information:", error);
     }
-    getRepo();
-    
+  };
 
+  return (
+    <div className="details">
+      <h2>My Work</h2>
+      <p>
+        I develop software using JavaScript to create 
+        dynamic and interactive web applications. 
+        My expertise includes leveraging JavaScript, TypeScript, Kotlin, Swift, 
+        and other technologies to build seamless, high-performance digital
+         experiences.
+      </p>
 
-    const portfolio = portfolio_data.map((p, i) => {
-
-        return (
-            <div className="divRow" key={i}>
-                <img src={p.images[0]} alt="project description" style={{ width: '45%', height: '45%',margin:15 }} />
-                <div>
-                    <ul>
-                        <li>Name : {p.name}</li>
-                        <li>Link : {p.link}</li>
-                    </ul>
-                    <span>{p.summary}</span>
-                </div>
-
-            </div>
-        )
-    })
-
-
-    return (
-        <div className="details">
-            <p> I develop software using JavaScript to create dynamic and interactive web applications.
-               My expertise includes leveraging the power of JavaScript to enhance user experiences 
-               and ensure seamless functionality. Through coding and debugging in JavaScript,
-                I bring innovative solutions to life in the digital realm.  </p>
-           
-                <div className="divRow">
-                <IconContext.Provider value={{ color: "lightblue", size: 65, className: "icons" }}>
-                <FaGithub onClick={() => window.open('https://github.com/thomasdreyer')} />
-              
-     
-            </IconContext.Provider>
-</div>
-            {/* <GitHubRepos username={githubUsername} token={githubToken} organization={githubOrganization} /> */}
-            {
-            //portfolio
-            }
-
+      {/* Display GitHub Repository Info */}
+      {repoInfo && (
+        <div className="repo-info">
+          <h3>Featured GitHub Repo: {repoInfo.name}</h3>
+          <p>{repoInfo.description}</p>
+          <a href={repoInfo.html_url} target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
         </div>
-    );
+      )}
+
+      {/* Portfolio Projects */}
+    
+      {portfolio_data.map((project, index) => (
+        <div className="divRow" key={index}>
+       <ul>
+              <li><strong>Name:</strong> {project.name}</li>
+              <li><strong>Link:</strong> <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a></li>
+      </ul>
+          <img
+            src={project.images[0]}
+            alt={project.name}
+            style={{ width: "95%", height: "95%", margin: 15 }}
+          />
+          <div>
+            
+            <p>{project.summary}</p>
+          </div>
+        </div>
+      ))}
+
+      {/* GitHub Profile Link */}
+      <div className="divRow">
+        <IconContext.Provider value={{ color: "lightblue", size: 65, className: "icons" }}>
+          <FaGithub onClick={() => window.open("https://github.com/thomasdreyer")} style={{ cursor: "pointer" }} />
+        </IconContext.Provider>
+      </div>
+    </div>
+  );
 }
-
-// export default function MyWork() {
-
-//     const portfolio = portfolio_data.map((p, i) => {
-
-//         return (
-//             <div className="divRow" key={i}>
-//                 <img src={p.images[0]} alt="project description" style={{ width: '50%', height: '50%' }} />
-//                 <div>
-//                     <ul>
-//                         <li>Name : {p.name}</li>
-//                         <li>Language : {p.language}</li>
-//                         <li>Stack : {p.stack}</li>
-//                     </ul>
-//                     <span>{p.summary}</span>
-//                 </div>
-
-//             </div>
-//         )
-//     })
-
-
-//     return (
-//         <div className="details">
-//             <p> I write software with javascript, typescript,dart,kotlin,java,c++ and swift.</p>
-//             <IconContext.Provider value={{ color: "lightblue", size: 35, className: "icons" }}>
-//                 <FaGithub onClick={() => window.open('https://github.com/thomasdreyer')} />
-//             </IconContext.Provider>
-//             {portfolio}
-
-
-
-
-
-
-//         </div>
-//     );
-// }
