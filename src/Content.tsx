@@ -2,7 +2,7 @@
 import MyStory from './MyStory';
 import MyWork from './MyWork';
 
-export default function Content(props) {
+export default function Content(props: any) {
   return (
     <div className="content" ref={props.storyRef}>
       <div style={{ marginTop: 100 }}>
