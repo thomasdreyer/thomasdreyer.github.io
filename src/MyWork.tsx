@@ -41,25 +41,21 @@ export default function MyWork() {
     <div className="details">
       <h2>My Work</h2>
       <p>
-      I develop software to create dynamic and interactive digital experiences.
-      My expertise spans multiple programming languages, 
-      including JavaScript, TypeScript, Kotlin, and Swift, enabling me
-      to build high-performance, scalable applications across various platforms.
-      I focus on crafting seamless user experiences and efficient
-      system architectures.
+      I develop high-performance, scalable software across platforms, crafting dynamic user experiences with JavaScript, TypeScript, Kotlin, and Swift.
+     
       </p>
     </div>
     
 
-      <div className="details"  style={{margin:'10px'}}>
+      {/* <div className="details"  style={{margin:'10px'}}>
         <IconContext.Provider value={{ color: "lightblue", size: '45', className: "icons" }}>
           <FaGithub onClick={() => window.open("https://github.com/thomasdreyer")} style={{ cursor: "pointer" }} />
         <FaJsfiddle onClick={() => window.open('https://jsfiddle.net/u/fsdevCOZA/fiddles/')} style={{ cursor: "pointer" }} />
         <FaFileAlt onClick={() => window.open('https://docs.google.com/document/d/1WLwzWn_-NsS7mZZIwO4rq5sIEBpnzObbSwE53-4taVU/edit?usp=sharing')} style={{ cursor: "pointer" }} />
         </IconContext.Provider>
-      </div>
+      </div> */}
     
-      {portfolio_data.map((project: any, index: number) => (
+       {portfolio_data.map((project: any, index: number) => (
         <div className="details" key={index} style={{margin:'10px'}}>
         <ul style={{alignSelf:'left'}}>
         <li><strong> {project.name}</strong></li>
@@ -76,7 +72,7 @@ export default function MyWork() {
          
          
         </div>
-      ))}
+      ))} 
 
 <div className="details">
           <h3>Let's Connect</h3>
@@ -101,10 +97,13 @@ export default function MyWork() {
             onClick={() => window.open("https://www.linkedin.com/in/thomas-dreyer")}
             style={{ cursor: "pointer" }}
           />
-          <FaXTwitter
+         
+          <FaGithub onClick={() => window.open("https://github.com/thomasdreyer")} style={{ cursor: "pointer" }} />
+       
+          {/* <FaXTwitter
             onClick={() => window.open("https://twitter.com/fsdevCOZA")}
             style={{ cursor: "pointer" }}
-          />
+          /> */}
         </IconContext.Provider>
       </div>
       </div>

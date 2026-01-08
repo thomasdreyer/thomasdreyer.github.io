@@ -24,9 +24,12 @@ export default function App() {
     <div className={lightMode === true ? 'AppLight' : 'AppDark'}>
       <div className="header">
         <img src={me} className="image" alt="Thomas Dreyer" onClick={() => window.open('https://docs.google.com/document/d/1WLwzWn_-NsS7mZZIwO4rq5sIEBpnzObbSwE53-4taVU/edit?usp=sharing')} />
-        <span className="navButton" onClick={() => window.open('https://docs.google.com/document/d/1WLwzWn_-NsS7mZZIwO4rq5sIEBpnzObbSwE53-4taVU/edit?usp=sharing')} style={{ cursor: "pointer" }}><FaFileAlt />My Resume</span>
-        <span className="navButton" onClick={() => workRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}>My work</span>
+        {/* <span className="navButton" onClick={() => window.open('https://docs.google.com/document/d/1WLwzWn_-NsS7mZZIwO4rq5sIEBpnzObbSwE53-4taVU/edit?usp=sharing')} style={{ cursor: "pointer" }}><FaFileAlt />My Resume</span> */}
         <span className="navButton" onClick={() => storyRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}>My story</span>
+        <span className="navButton" onClick={() => workRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}>My Work</span>
+        <span className="navButton" onClick={() => window.open('https://docs.google.com/document/d/1WLwzWn_-NsS7mZZIwO4rq5sIEBpnzObbSwE53-4taVU/edit?usp=sharing')} style={{ cursor: "pointer" }}><FaFileAlt />My Resume</span>
+       
+        {/* <span className="navButton" onClick={() => storyRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}>My story</span> */}
        
         <LightDarkSwitch lightMode={lightMode} setLightMode={setLightMode} />
       </div>
