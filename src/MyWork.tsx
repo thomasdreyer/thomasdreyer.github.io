@@ -41,7 +41,7 @@ export default function MyWork() {
     <div className="details">
       <h2>My Work</h2>
       <p>
-      I develop high-performance, scalable software across platforms, crafting dynamic user experiences with JavaScript, TypeScript, Kotlin, and Swift.
+      I develop high-performance, scalable software across platforms, crafting dynamic user experiences with JavaScript, TypeScript, Kotlin, Swift and C#.
      
       </p>
     </div>
